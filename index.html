@@ -4,20 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>ReWear - EcoStyle</title>
+    <!-- Tailwind CDN is fine for this setup -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              // Updated Palette with Pale Green
-              ecoBlack: '#1A1A1A',     // Primary Text
-              ecoGray: '#F9FAF9',      // Lighter Card Backgrounds
-              ecoPaleGreen: '#EBF2EE', // Main Background (Soft Green)
-              ecoGreen: '#4A6150',     // Darker Accent
-              ecoOlive: '#7DA288',     // Softer Accent
-              ecoWhite: '#FFFFFF',     // Surface
-              ecoStone: '#E8E8E8',     // Borders
+              ecoBlack: '#1A1A1A',
+              ecoGray: '#F9FAF9',
+              ecoPaleGreen: '#EBF2EE',
+              ecoGreen: '#4A6150',
+              ecoOlive: '#7DA288',
+              ecoWhite: '#FFFFFF',
+              ecoStone: '#E8E8E8',
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
@@ -31,33 +31,34 @@
       }
     </script>
     <style>
-      /* Hide scrollbar for chrome/safari/opera */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
-      /* Hide scrollbar for IE, Edge and Firefox */
       .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
       body {
-        background-color: #D1DCD6; /* Outer background matching theme tone */
+        background-color: #D1DCD6;
       }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
 </head>
   <body class="text-gray-900 antialiased flex justify-center min-h-screen">
     <div id="root" class="w-full flex justify-center"></div>
+    <!-- Vite will handle this import correctly now -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
